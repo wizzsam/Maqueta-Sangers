@@ -1,12 +1,12 @@
+import MainLayout from "./layout/MainLayout";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <>
-      <div>
-        <h1 className="text-4xl font-bold">Maqueta Sangers</h1>
-      </div>
-    </>
-  )
+    <MainLayout>
+      <Home />
+    </MainLayout>
+  );
 }
 
-export default App
+export default App;
