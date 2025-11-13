@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import LogoSangers from "../assets/LogoSangersPng.png";
 
 const Header: React.FC = () => {
@@ -10,58 +11,88 @@ const Header: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const baseNavText = scrolled ? "text-gray-800" : "text-white";
+
+  const linkClass = (isActive: boolean) =>
+    [
+      "pb-1 font-bold transition-colors",
+      baseNavText,
+      "hover:text-orange-500",
+      isActive
+        ? scrolled
+          ? "text-orange-600 border-b-2 border-orange-600"
+          : "text-orange-400 border-b-2 border-orange-400"
+        : "",
+    ]
+      .filter(Boolean)
+      .join(" ");
+
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white shadow-md backdrop-blur-sm"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-white shadow-md backdrop-blur-sm" : "bg-transparent"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-3">
-          <img src={LogoSangers} alt="Logo Sangers" className="h-10 w-auto" />
+          <NavLink to="/">
+            <img src={LogoSangers} alt="Logo Sangers" className="h-10 w-auto" />
+          </NavLink>
         </div>
 
         {/* Navegación */}
         <nav
-          className={`hidden md:flex items-center space-x-8 text-sm font-medium transition-colors duration-300 ${
-            scrolled ? "text-gray-800" : "text-white"
-          }`}
+          className={`hidden md:flex items-center space-x-8 text-sm font-medium transition-colors duration-300`}
         >
-          <a
-            href="#"
-            className={`pb-1 font-bold ${
-              scrolled
-                ? "text-orange-600 font-semibold border-b-2 border-orange-600"
-                : "text-orange-400 font-semibold border-b-2 border-orange-400"
-            }`}
-          >
+          <NavLink to="/" className={({ isActive }) => linkClass(isActive)}>
             Inicio
-          </a>
-          <a href="#" className="hover:text-orange-500 font-bold">
+          </NavLink>
+
+          <NavLink
+            to="/nosotros"
+            className={({ isActive }) => linkClass(isActive)}
+          >
             Nosotros
-          </a>
-          <a href="#" className="hover:text-orange-500 font-bold">
+          </NavLink>
+
+          <NavLink
+            to="/servicios"
+            className={({ isActive }) => linkClass(isActive)}
+          >
             Servicios
-          </a>
-          <a href="#" className="hover:text-orange-500 font-bold">
+          </NavLink>
+
+          <NavLink
+            to="/productos"
+            className={({ isActive }) => linkClass(isActive)}
+          >
             Productos
-          </a>
-          <a href="#" className="hover:text-orange-500 font-bold">
+          </NavLink>
+
+          <NavLink
+            to="/capacitaciones"
+            className={({ isActive }) => linkClass(isActive)}
+          >
             Capacitaciones
-          </a>
-          <a
-            href="#"
-            className={`px-4 py-2 font-bold rounded-md transition-colors duration-200 ${
-              scrolled
-                ? "bg-teal-500 hover:bg-teal-600 text-white"
-                : "bg-teal-500/90 hover:bg-teal-400 text-white"
-            }`}
+          </NavLink>
+
+          {/* CTA: si luego tienes /contacto, lo apuntas ahí */}
+          <NavLink
+            to="/contacto"
+            className={({ isActive }) =>
+              [
+                "px-4 py-2 font-bold rounded-md transition-colors duration-200",
+                isActive ? "ring-2 ring-offset-2 ring-teal-500/70" : "",
+                scrolled
+                  ? "bg-teal-500 hover:bg-teal-600 text-white"
+                  : "bg-teal-500/90 hover:bg-teal-400 text-white",
+              ]
+                .filter(Boolean)
+                .join(" ")
+            }
           >
             Contáctanos
-          </a>
+          </NavLink>
         </nav>
       </div>
 
