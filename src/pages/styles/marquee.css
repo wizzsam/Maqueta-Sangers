@@ -1,0 +1,42 @@
+.marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee__inner {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: marquee-left 25s linear infinite;
+}
+
+.marquee--reverse .marquee__inner {
+  animation-name: marquee-right;
+}
+
+.marquee__item {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  flex-shrink: 0;
+}
+
+/* Animación fila superior: izquierda -> derecha */
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Animación fila inferior: derecha -> izquierda */
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Nosotros from "./pages/Nosotros";
 import Servicios from "./pages/Servicios";
 import ServiceProductsPage from "./pages/ServiceProductsPage";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/servicios" element={<Servicios />} />
+        <Route path="/contacto" element={<Contact />} />
         <Route
           path="/servicios/:serviceId/productos"
           element={<ServiceProductsPage />}
