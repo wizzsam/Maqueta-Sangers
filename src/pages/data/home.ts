@@ -47,6 +47,7 @@ export const SLIDES: Slide[] = [
 ];
 
 export const PRODUCTS: Product[] = [
+  // -------- DESRATIZACIÓN --------
   {
     id: "veneno-ratas",
     title: "Veneno para Rata (Bloques parafinados)",
@@ -57,6 +58,17 @@ export const PRODUCTS: Product[] = [
     href: "/productos/veneno-ratas",
   },
   {
+    id: "veneno-ratas-kilo",
+    title: "Rodenticida pellets 1 kg",
+    description:
+      "Rodenticida anticoagulante en pellets para control intensivo de ratas y ratones.",
+    image: VenenoRatas,
+    price: "S/ 130.00",
+    href: "/productos/veneno-ratas-kilo",
+  },
+
+  // -------- CONTROL DE PALOMAS --------
+  {
     id: "trampa-palomas",
     title: "Trampa para Palomas + Cebo",
     description: "Sistema de captura ética para techos y azoteas. Reutilizable.",
@@ -65,6 +77,17 @@ export const PRODUCTS: Product[] = [
     href: "/productos/trampa-palomas",
   },
   {
+    id: "pinchos-aves",
+    title: "Pinchos anti-aves en acero",
+    description:
+      "Barreras físicas para evitar el posado de palomas en cornisas y estructuras.",
+    image: TrampaPalomas,
+    price: "S/ 89.00",
+    href: "/productos/pinchos-aves",
+  },
+
+  // -------- CONTROL DE PLAGAS / DESINSECTACIÓN --------
+  {
     id: "gel-cucarachas",
     title: "Gel para Cucarachas",
     description:
@@ -72,31 +95,64 @@ export const PRODUCTS: Product[] = [
     image: GelCucarachas,
     price: "S/ 49.00",
     href: "/productos/gel-cucarachas",
-  },  {
-    id: "veneno-ratas2",
-    title: "Veneno para Rata (Bloques parafinados)",
-    description:
-      "Rodenticida de alta eficacia para uso profesional. Resistente a la humedad.",
-    image: VenenoRatas,
-    price: "S/ 39.90",
-    href: "/productos/veneno-ratas",
   },
   {
-    id: "trampa-palomas2",
-    title: "Trampa para Palomas + Cebo",
-    description: "Sistema de captura ética para techos y azoteas. Reutilizable.",
-    image: TrampaPalomas,
-    price: "S/ 129.00",
-    href: "/productos/trampa-palomas",
-  },
-  {
-    id: "gel-cucarachas2",
-    title: "Gel para Cucarachas",
+    id: "cebo-hormigas",
+    title: "Cebo en gel para hormigas",
     description:
-      "Cebo en gel de rápida acción para cocinas y áreas sensibles.",
+      "Fórmula de alta atracción para control de hormigas en interiores y exteriores techados.",
     image: GelCucarachas,
-    price: "S/ 49.00",
-    href: "/productos/gel-cucarachas",
+    price: "S/ 44.90",
+    href: "/productos/cebo-hormigas",
+  },
+  {
+    id: "insecticida-concentrado",
+    title: "Insecticida concentrado emulsionable",
+    description:
+      "Concentrado profesional para dilución y aplicación en control de insectos rastreros y voladores.",
+    image: GelCucarachas,
+    price: "S/ 79.00",
+    href: "/productos/insecticida-concentrado",
+  },
+
+  // -------- DESINFECCIÓN --------
+  {
+    id: "amonio-cuaternario",
+    title: "Desinfectante Amonio Cuaternario",
+    description:
+      "Desinfectante de amplio espectro para ambientes críticos, oficinas y comercios.",
+    image: Desratizacion,
+    price: "S/ 65.00",
+    href: "/productos/amonio-cuaternario",
+  },
+  {
+    id: "nebulizador-electrico",
+    title: "Nebulizador eléctrico portátil",
+    description:
+      "Equipo para aplicación de desinfectantes en neblina fina, ideal para espacios cerrados.",
+    image: Desratizacion,
+    price: "S/ 650.00",
+    href: "/productos/nebulizador-electrico",
+  },
+
+  // -------- LIMPIEZA DE CISTERNAS --------
+  {
+    id: "cloro-granulado",
+    title: "Cloro granulado para cisternas",
+    description:
+      "Cloro granulado estabilizado para desinfección de reservorios de agua potable.",
+    image: Insectos,
+    price: "S/ 59.00",
+    href: "/productos/cloro-granulado",
+  },
+  {
+    id: "kit-limpieza-cisternas",
+    title: "Kit de limpieza para cisternas",
+    description:
+      "Juego de implementos para limpieza mecánica y desinfección de tanques.",
+    image: Insectos,
+    price: "S/ 189.00",
+    href: "/productos/kit-limpieza-cisternas",
   },
 ];
 

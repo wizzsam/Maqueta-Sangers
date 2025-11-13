@@ -1,5 +1,6 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 import { CheckCircle2, MessageCircle, Phone } from "lucide-react";
 import type { Service, ServiceAccent } from "../../types/services";
 import { WA_PHONE } from "../../data/services";
@@ -72,6 +73,14 @@ export default function ServiceDetail({ service }: Props) {
                                     Llamar ahora
                                     <Phone size={16} />
                                 </a>
+
+                                {/* NUEVO: botón a productos del servicio */}
+                                <Link
+                                    to={`/servicios/${service.id}/productos`}
+                                    className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/90 px-5 py-2.5 text-sm font-semibold text-gray-800 hover:bg-gray-50"
+                                >
+                                    Ver productos del servicio
+                                </Link>
                             </div>
                         </motion.div>
                     </AnimatePresence>

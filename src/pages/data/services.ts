@@ -69,7 +69,7 @@ export const SERVICES: Service[] = [
         ],
         whatsappText:
             "Hola, deseo cotizar el servicio de Control de Plagas para mi empresa/negocio.",
-        relatedProductIds: ["gel-cucarachas", "gel-cucarachas2"],
+        relatedProductIds: ["gel-cucarachas", "cebo-hormigas", "insecticida-concentrado"],
     },
     {
         id: "desinfeccion",
@@ -133,7 +133,7 @@ export const SERVICES: Service[] = [
         ],
         whatsappText:
             "Hola, deseo cotizar el servicio de Desinfección de Ambientes.",
-        relatedProductIds: [],
+        relatedProductIds: ["amonio-cuaternario", "nebulizador-electrico"],
     },
     {
         id: "desratizacion",
@@ -197,7 +197,7 @@ export const SERVICES: Service[] = [
         ],
         whatsappText:
             "Hola, deseo cotizar el servicio de Desratización para mi local.",
-        relatedProductIds: ["veneno-ratas", "veneno-ratas2"],
+        relatedProductIds: ["veneno-ratas", "veneno-ratas-kilo"],
     },
     {
         id: "desinsectacion",
@@ -261,7 +261,7 @@ export const SERVICES: Service[] = [
         ],
         whatsappText:
             "Hola, deseo cotizar el servicio de Desinsectación para mi negocio.",
-        relatedProductIds: ["gel-cucarachas", "gel-cucarachas2"],
+        relatedProductIds: ["insecticida-concentrado", "gel-cucarachas"],
     },
     {
         id: "limpieza-cisternas",
@@ -325,7 +325,7 @@ export const SERVICES: Service[] = [
         ],
         whatsappText:
             "Hola, deseo cotizar limpieza y desinfección de cisterna o tanque de agua.",
-        relatedProductIds: [],
+        relatedProductIds: ["cloro-granulado", "kit-limpieza-cisternas"],
     },
     {
         id: "control-palomas",
@@ -389,7 +389,7 @@ export const SERVICES: Service[] = [
         ],
         whatsappText:
             "Hola, deseo cotizar un servicio de Control de Palomas para mi edificio.",
-        relatedProductIds: ["trampa-palomas", "trampa-palomas2"],
+        relatedProductIds: ["trampa-palomas", "pinchos-aves"],
     },
 ];
 
