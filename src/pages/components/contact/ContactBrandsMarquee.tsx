@@ -10,10 +10,10 @@ import brand4 from "../../../assets/brands/brand4.jpg";
 import brand5 from "../../../assets/brands/brand5.jpg";
 
 import brand6 from "../../../assets/brands/brand6.jpg";
-import brand7 from "../../../assets/brands/brand7.jpg";
+import brand7 from "../../../assets/brands/brand7.png";
 import brand8 from "../../../assets/brands/brand8.jpg";
-import brand9 from "../../../assets/brands/brand9.jpg";
-import brand10 from "../../../assets/brands/brand10.jpg";
+import brand9 from "../../../assets/brands/brand9.png";
+import brand10 from "../../../assets/brands/brand10.png";
 
 type Brand = {
   src: string;
