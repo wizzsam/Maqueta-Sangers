@@ -9,7 +9,7 @@ type Props = {
 
 export default function HistorySection({ image, heading, paragraphs }: Props) {
     return (
-        <section className="bg-gray-50 pb-12">
+        <section className="bg-gray-50 pt-16 pb-12">
             <div className="max-w-7xl mx-auto px-6 grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.2fr)] items-center">
                 <motion.div
                     initial={{ opacity: 0, x: -40 }}

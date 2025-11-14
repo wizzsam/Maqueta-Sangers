@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ServicesHero from "./components/services/ServicesHero";
+import ServiceTabs from "./components/services/ServiceTabs";
 import ServiceDetail from "./components/services/ServiceDetail";
 import ServiceProcess from "./components/services/ServiceProcess";
 import ServiceStats from "./components/services/ServiceStats";
@@ -16,11 +17,17 @@ export default function Servicios() {
 
     return (
         <main className="w-full bg-gray-50">
-            <ServicesHero
+            {/* Hero con imagen de fondo */}
+            <ServicesHero />
+
+            {/* Tabs flotando bajo el hero */}
+            <ServiceTabs
                 services={SERVICES}
                 activeId={activeService.id}
                 onChange={setActiveId}
             />
+
+            {/* Contenido del servicio seleccionado */}
             <ServiceDetail service={activeService} />
             <ServiceProcess service={activeService} />
             <ServiceStats service={activeService} />

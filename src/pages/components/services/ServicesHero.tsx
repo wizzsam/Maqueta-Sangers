@@ -1,80 +1,60 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import {
-    Bug,
-    SprayCan,
-    Droplets,
-    Rat,
-    ShieldAlert,
-    Bird,
-    MessageCircle,
-} from "lucide-react";
-import type { Service, ServiceAccent } from "../../types/services";
+import BgServicios from "../../../assets/Desratizacion.webp";
 
-const iconMap = {
-    bug: Bug,
-    spray: SprayCan,
-    droplets: Droplets,
-    rat: Rat,
-    shield: ShieldAlert,
-    bird: Bird,
-} as const;
+type Props = {};
 
-type Props = {
-    services: Service[];
-    activeId: Service["id"];
-    onChange: (id: Service["id"]) => void;
-};
-
-export default function ServicesHero({ services, activeId, onChange }: Props) {
+const ServicesHero: React.FC<Props> = () => {
     return (
-        <section className="pt-24 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-6 py-8">
-                <p className="text-xs font-semibold tracking-[0.2em] text-gray-500 uppercase">
-                    Servicios
-                </p>
-                <h1 className="mt-2 text-3xl md:text-4xl font-extrabold text-blue-900">
-                    Nuestros <span className="text-red-600">Servicios</span>
-                </h1>
-                <p className="mt-2 max-w-2xl text-gray-600 text-sm md:text-base">
-                    Soluciones profesionales de saneamiento ambiental adaptadas a hogares,
-                    comercios e industria. Respuesta rápida, protocolos certificados y
-                    atención personalizada.
-                </p>
+        <section
+            className="relative h-[60vh] min-h-[420px] w-full overflow-hidden text-white"
+            style={{
+                backgroundImage: `url(${BgServicios})`,
+            }}
+        >
+            {/* overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/80 to-slate-900/70 backdrop-blur-[2px]" />
 
-                {/* Tabs de servicios */}
-                <div className="mt-6 flex flex-wrap gap-3">
-                    {services.map((s) => {
-                        const Icon = iconMap[s.icon];
-                        const isActive = s.id === activeId;
-                        return (
-                            <button
-                                key={s.id}
-                                onClick={() => onChange(s.id)}
-                                className={`group inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition-all ${isActive
-                                        ? "border-red-500 bg-red-50 text-red-600 shadow-sm"
-                                        : "border-gray-200 bg-white text-gray-700 hover:border-red-300 hover:text-red-600"
-                                    }`}
-                            >
-                                <Icon
-                                    size={18}
-                                    className={`transition-transform group-hover:scale-110 ${isActive ? "text-red-600" : "text-red-500"
-                                        }`}
-                                />
-                                <span>{s.name}</span>
-                            </button>
-                        );
-                    })}
-                </div>
+            <div className="relative z-10 h-full">
+                <div className="max-w-7xl mx-auto h-full px-6 flex flex-col justify-center pt-20 md:pt-16">
+                    {/* migas */}
+                    <motion.p
+                        initial={{ opacity: 0, y: -6 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4 }}
+                        className="text-xs md:text-sm text-slate-200/80 mb-3 tracking-wide"
+                    >
+                        <Link
+                            to="/"
+                            className="text-slate-300/80 hover:text-slate-100 transition-colors"
+                        >
+                            Inicio
+                        </Link>
+                        <span className="mx-1 text-slate-400">/</span>
+                        <span className="text-orange-300 font-semibold">Servicios</span>
+                    </motion.p>
 
-                <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs text-gray-500 shadow-sm border border-gray-100">
-                    <MessageCircle size={14} className="text-red-500" />
-                    <span>
-                        Toca un servicio para ver el detalle, proceso y productos
-                        relacionados.
-                    </span>
+                    {/* título + descripción */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 18 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.05 }}
+                    >
+                        <h1 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">
+                            Nuestros{" "}
+                            <span className="text-orange-300">Servicios especializados</span>
+                        </h1>
+                        <p className="mt-2 max-w-2xl text-sm md:text-base text-slate-100/90">
+                            Soluciones profesionales de saneamiento ambiental para hogares,
+                            comercios e industria. Protocolos certificados, respuesta rápida y
+                            atención personalizada.
+                        </p>
+                    </motion.div>
                 </div>
             </div>
         </section>
     );
-}
+};
+
+export default ServicesHero;
