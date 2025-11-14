@@ -19,7 +19,7 @@ const ContactHero: React.FC = () => {
 
       {/* Contenido */}
       <div className="relative z-10 h-full">
-        <div className="max-w-6xl mx-auto h-full px-6 flex flex-col justify-center pt-17 md:pt-16">
+        <div className="max-w-6xl mx-auto h-full px-6 flex flex-col justify-center pt-20 md:pt-16">
         {/* Breadcrumb con Link, igual que productos */}
         <motion.p
           initial={{ opacity: 0, y: -8 }}
