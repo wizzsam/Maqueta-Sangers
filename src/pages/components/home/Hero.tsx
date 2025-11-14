@@ -119,12 +119,6 @@ export default function Hero({ slides, waPhone, waMsg }: Props) {
         </div>
       </div>
 
-      <button onClick={prev} className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/80 hover:bg-white p-2 shadow">
-        <ChevronLeft className="size-5" />
-      </button>
-      <button onClick={next} className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/80 hover:bg-white p-2 shadow">
-        <ChevronRight className="size-5" />
-      </button>
 
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
         {slides.map((_, i) => (

@@ -7,6 +7,7 @@ import ServiceProductsPage from "./pages/ServiceProductsPage";
 import Contact from "./pages/Contact";
 import Productos from "./pages/Productos";
 import ProductDetail from "./pages/components/productos/ProductDetail";
+import Capacitaciones from "./pages/Capacitaciones";
 import BotonWsp from "./components/common/FloatingWhatsApp";
 import ChatBot from "./components/common/FloatingChatAssistant";
 import ServiceDetailPage from "./pages/ServiceDetailPage";
@@ -27,7 +28,7 @@ function App() {
         {/* futuras rutas */}
         <Route path="/productos" element={<Productos />} /> 
          <Route path="/productos/:id" element={<ProductDetail />} />
-        {/* <Route path="/capacitaciones" element={<Capacitaciones />} /> */}
+        { <Route path="/capacitaciones" element={<Capacitaciones />} />}
       </Routes>
       <BotonWsp />
       <ChatBot />

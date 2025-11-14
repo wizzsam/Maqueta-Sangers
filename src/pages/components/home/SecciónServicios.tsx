@@ -23,7 +23,7 @@ export default function ServicesSection() {
           <div className="mt-5 flex flex-wrap gap-2">
             <a href={`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent("Quiero cotizar Control de Plagas.")}`}
                target="_blank" rel="noreferrer"
-               className="inline-flex items-center gap-2 rounded-lg bg-green-500 text-white px-4 py-2 text-sm font-semibold hover:bg-green-700">
+               className="inline-flex items-center gap-2 rounded-lg bg-red-500 text-white px-4 py-2 text-sm font-semibold hover:bg-red-700">
               Cotizar <MessageCircle className="size-4" />
             </a>
            
@@ -45,7 +45,7 @@ export default function ServicesSection() {
           <div className="mt-5 flex flex-wrap gap-2">
             <a href={`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent("Quiero cotizar Desinfección & Sanitización.")}`}
                target="_blank" rel="noreferrer"
-               className="inline-flex items-center gap-2 rounded-lg bg-green-500 text-white px-4 py-2 text-sm font-semibold hover:bg-green-700">
+               className="inline-flex items-center gap-2 rounded-lg bg-red-500 text-white px-4 py-2 text-sm font-semibold hover:bg-red-700">
               Cotizar <MessageCircle className="size-4" />
             </a>
          
@@ -67,7 +67,7 @@ export default function ServicesSection() {
           <div className="mt-5 flex flex-wrap gap-2">
             <a href={`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent("Quiero cotizar Limpieza de Cisternas.")}`}
                target="_blank" rel="noreferrer"
-               className="inline-flex items-center gap-2 rounded-lg bg-green-500 text-white px-4 py-2 text-sm font-semibold hover:bg-green-700">
+               className="inline-flex items-center gap-2 rounded-lg bg-red-500 text-white px-4 py-2 text-sm font-semibold hover:bg-red-700">
               Cotizar <MessageCircle className="size-4" />
             </a>
         
@@ -87,7 +87,7 @@ export default function ServicesSection() {
           <div className="mt-5 flex flex-wrap gap-2">
             <a href={`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent("Quiero cotizar Desratización.")}`}
                target="_blank" rel="noreferrer"
-               className="inline-flex items-center gap-2 rounded-lg bg-green-500 text-white px-4 py-2 text-sm font-semibold hover:bg-green-700">
+               className="inline-flex items-center gap-2 rounded-lg bg-red-500 text-white px-4 py-2 text-sm font-semibold hover:bg-red-700">
               Cotizar <MessageCircle className="size-4" />
             </a>
           
@@ -107,7 +107,7 @@ export default function ServicesSection() {
           <div className="mt-5 flex flex-wrap gap-2">
             <a href={`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent("Quiero cotizar Desinsectación.")}`}
                target="_blank" rel="noreferrer"
-               className="inline-flex items-center gap-2 rounded-lg bg-green-500 text-white px-4 py-2 text-sm font-semibold hover:bg-green-700">
+               className="inline-flex items-center gap-2 rounded-lg bg-red-500 text-white px-4 py-2 text-sm font-semibold hover:bg-red-700">
               Cotizar <MessageCircle className="size-4" />
             </a>
             <button className="inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold hover:underline">
@@ -126,7 +126,7 @@ export default function ServicesSection() {
           <div className="mt-5 flex flex-wrap gap-2">
             <a href={`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent("Quiero cotizar Control de palomas.")}`}
                target="_blank" rel="noreferrer"
-               className="inline-flex items-center gap-2 rounded-lg bg-green-500 text-white px-4 py-2 text-sm font-semibold hover:bg-green-700">
+               className="inline-flex items-center gap-2 rounded-lg bg-red-500 text-white px-4 py-2 text-sm font-semibold hover:bg-red-700">
               Cotizar <MessageCircle className="size-4" />
             </a>
             

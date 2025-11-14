@@ -10,6 +10,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { PRODUCTS } from "./ProductsCatalog";
+import FichaTecnicaRaticida from "../../../assets/docs/Ficha_Tecnica_Raticida_Agrochem.pdf";
 
 // Define the Product type locally based on the structure of PRODUCTS items
 type Product = {
@@ -54,7 +55,7 @@ const PRODUCT_EXTRA: Record<string, ProductExtra> = {
       "Marcar y registrar los puntos de aplicación.",
       "Revisar las estaciones cada 2–3 días y reponer si es necesario.",
     ],
-    pdfUrl: "/docs/raticida-agrochem-ficha-tecnica.pdf",
+    pdfUrl: FichaTecnicaRaticida,
   },
   "paloma-2": {
     longDescription:
@@ -73,7 +74,7 @@ const PRODUCT_EXTRA: Record<string, ProductExtra> = {
       "Colocar cebo atractivo (granos, maíz, etc.).",
       "Verificar diariamente y coordinar el retiro con personal autorizado.",
     ],
-    pdfUrl: "/docs/trampa-palomas-ficha-tecnica.pdf",
+    pdfUrl: FichaTecnicaRaticida,
   },
   // Puedes añadir extras para el resto de IDs ("gel-3", "trampa-4", etc.)
 };
@@ -236,19 +237,11 @@ export default function ProductDetail() {
                   Consultar por WhatsApp
                 </a>
 
-                <a
-                  href="tel:+51999999999"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-orange-500 bg-orange-50 px-4 py-2.5 text-sm font-semibold text-orange-700 hover:bg-orange-100 focus:outline-none focus:ring-2 focus:ring-orange-500/70"
-                >
-                  <Phone className="size-4" />
-                  Llamar a Sangers
-                </a>
 
                 {extra?.pdfUrl && (
                   <a
                     href={extra.pdfUrl}
-                    target="_blank"
-                    rel="noreferrer"
+                    download
                     className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-300/70"
                   >
                     <Download className="size-4" />
