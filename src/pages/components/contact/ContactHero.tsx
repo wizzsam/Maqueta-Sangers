@@ -7,7 +7,7 @@ import heroBg from "../../../assets/contact.png";
 
 const ContactHero: React.FC = () => {
   return (
-    <section className="relative h-[60vh] min-h-[420px] w-full overflow-hidden">
+    <section className="relative h-[60vh] min-h-[420px] w-full overflow-hidden text-white">
       {/* Fondo imagen + overlay */}
       <div className="absolute inset-0">
         <img
@@ -18,7 +18,8 @@ const ContactHero: React.FC = () => {
       </div>
 
       {/* Contenido */}
-      <div className="relative max-w-6xl mx-auto px-6 py-16 md:py-20">
+      <div className="relative z-10 h-full">
+        <div className="max-w-6xl mx-auto h-full px-6 flex flex-col justify-center pt-17 md:pt-16">
         {/* Breadcrumb con Link, igual que productos */}
         <motion.p
           initial={{ opacity: 0, y: -8 }}
@@ -59,7 +60,7 @@ const ContactHero: React.FC = () => {
         </motion.p>
 
         {/* Pills */}
-        <div className="mt-6 flex flex-wrap gap-3">
+        <div className="mt-6 flex flex-wrap gap-3 text-xs md:text-sm">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -67,7 +68,7 @@ const ContactHero: React.FC = () => {
             className="flex items-center gap-2 bg-white/10 text-slate-100 px-4 py-2 rounded-full backdrop-blur"
           >
             <span className="text-pink-300">📞</span>
-            <span className="text-xs md:text-sm">Atención rápida</span>
+            <span>Atención rápida</span>
           </motion.div>
 
           <motion.div
@@ -77,7 +78,7 @@ const ContactHero: React.FC = () => {
             className="flex items-center gap-2 bg-white/10 text-slate-100 px-4 py-2 rounded-full backdrop-blur"
           >
             <span className="text-sky-300">💼</span>
-            <span className="text-xs md:text-sm">Asesoría profesional</span>
+            <span>Asesoría profesional</span>
           </motion.div>
 
           <motion.div
@@ -87,8 +88,9 @@ const ContactHero: React.FC = () => {
             className="flex items-center gap-2 bg-white/10 text-slate-100 px-4 py-2 rounded-full backdrop-blur"
           >
             <span className="text-emerald-300">📝</span>
-            <span className="text-xs md:text-sm">Cotizaciones instantáneas</span>
+            <span>Cotizaciones instantáneas</span>
           </motion.div>
+        </div>
         </div>
       </div>
     </section>
