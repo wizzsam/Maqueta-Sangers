@@ -9,6 +9,7 @@ import Productos from "./pages/Productos";
 import ProductDetail from "./pages/components/productos/ProductDetail";
 import BotonWsp from "./components/common/FloatingWhatsApp";
 import ChatBot from "./components/common/FloatingChatAssistant";
+import ServiceDetailPage from "./pages/ServiceDetailPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/servicios" element={<Servicios />} />
+        <Route path="/servicios/:id" element={<ServiceDetailPage />} />
         <Route path="/contacto" element={<Contact />} />
         <Route
           path="/servicios/:serviceId/productos"

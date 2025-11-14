@@ -6,6 +6,7 @@ import ServiceProcess from "./components/services/ServiceProcess";
 import ServiceStats from "./components/services/ServiceStats";
 import RelatedProductsStrip from "./components/services/RelatedProductsStrip";
 import ServicesCTA from "./components/services/ServicesCTA";
+import ServicesOverviewGrid from "./components/services/ServicesOverviewGrid";
 
 import { SERVICES, DEFAULT_SERVICE_ID } from "./data/services";
 import type { Service } from "./types/services";
@@ -17,21 +18,8 @@ export default function Servicios() {
 
     return (
         <main className="w-full bg-gray-50">
-            {/* Hero con imagen de fondo */}
             <ServicesHero />
-
-            {/* Tabs flotando bajo el hero */}
-            <ServiceTabs
-                services={SERVICES}
-                activeId={activeService.id}
-                onChange={setActiveId}
-            />
-
-            {/* Contenido del servicio seleccionado */}
-            <ServiceDetail service={activeService} />
-            <ServiceProcess service={activeService} />
-            <ServiceStats service={activeService} />
-            <RelatedProductsStrip service={activeService} />
+            <ServicesOverviewGrid />
             <ServicesCTA />
         </main>
     );
