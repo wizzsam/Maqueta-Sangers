@@ -62,7 +62,7 @@ const CapacitacionesHero: React.FC<Props> = ({
   );
 
   return (
-      <section className="relative h-[65vh] min-h-[440px] w-full overflow-hidden">
+    <section className="relative h-[65vh] min-h-[440px] w-full overflow-hidden">
 
       {/* Fondo + overlay */}
       <div className="absolute inset-0">
@@ -77,7 +77,7 @@ const CapacitacionesHero: React.FC<Props> = ({
 
       {/* CONTENIDO */}
       <div className="relative max-w-6xl mx-auto px-6 flex flex-col justify-center h-full pt-10">
-        
+
         {/* Breadcrumb */}
         <motion.p
           initial={{ opacity: 0, y: -8 }}
@@ -93,89 +93,60 @@ const CapacitacionesHero: React.FC<Props> = ({
           </Link>
 
           <span className="mx-1 text-slate-400">/</span>
-          <span className="text-orange-300 font-semibold">Capacitaciones</span>
+          <span className="text-orange-400 font-semibold">Capacitaciones</span>
         </motion.p>
 
-    <motion.h1
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="mt-2 text-3xl md:text-4xl font-extrabold text-white drop-shadow-lg"
-    >
-      Nuestras{" "}
-      <span className="text-orange-400">Capacitaciones</span>
-    </motion.h1>
+        <motion.h1
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mt-2 text-3xl md:text-4xl font-extrabold text-white drop-shadow-lg"
+        >
+          Nuestras{" "}
+          <span className="text-orange-400">Capacitaciones</span>
+        </motion.h1>
 
-    <motion.p
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.1 }}
-      className="mt-2 max-w-2xl text-slate-200 text-sm md:text-base"
-    >
-      Formación profesional certificada para tu equipo. Selecciona una categoría
-      y luego un curso para ver el detalle.
-    </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="mt-2 max-w-2xl text-slate-200 text-sm md:text-base"
+        >
+          Formación profesional certificada para tu equipo. Selecciona una categoría
+          y luego un curso para ver el detalle.
+        </motion.p>
 
 
         {/* TABS PRINCIPALES */}
-      <div className="mt-6 flex flex-wrap gap-3">
+        <div className="mt-6 flex flex-wrap gap-3">
           {TRAINING_CATEGORIES.map((cat) => (
             <button
               key={cat.id}
               onClick={() => onCategoryChange(cat.id)}
-              className={`group inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition-all ${
-                activeCategory === cat.id
-                  ? "border-orange-500 bg-orange-50 text-orange-600 shadow-sm"
-                  : "border-gray-200 bg-white text-gray-700 hover:border-orange-300 hover:text-orange-600"
-              }`}
+              className={`group inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition-all ${activeCategory === cat.id
+                ? "border-orange-500 bg-orange-50 text-orange-600 shadow-sm"
+                : "border-gray-200 bg-white text-gray-700 hover:border-orange-300 hover:text-orange-600"
+                }`}
             >
               <ShieldAlert
                 size={18}
-                className={`transition-transform group-hover:scale-110 ${
-                  activeCategory === cat.id
-                    ? "text-orange-600"
-                    : "text-orange-500"
-                }`}
+                className={`transition-transform group-hover:scale-110 ${activeCategory === cat.id
+                  ? "text-orange-600"
+                  : "text-orange-500"
+                  }`}
               />
               <span>{cat.name}</span>
             </button>
           ))}
         </div>
 
-        {/* SUB-TABS DE CURSOS */}
-        <div className="mt-6 flex flex-wrap gap-3">
-          {courses.map((course) => {
-            const Icon = courseIconById(course);
-            const isActive = activeCourseId === course.id;
 
-            return (
-              <button
-                key={course.id}
-                onClick={() => onCourseChange(course.id)}
-                className={`group inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition-all ${
-                  isActive
-                    ? "border-blue-500 bg-blue-50 text-blue-700 shadow-sm"
-                    : "border-gray-200 bg-white text-gray-700 hover:border-blue-300 hover:text-blue-700"
-                }`}
-              >
-                <Icon
-                  size={18}
-                  className={`transition-transform group-hover:scale-110 ${
-                    isActive ? "text-blue-700" : "text-blue-500"
-                  }`}
-                />
-                <span>{course.title}</span>
-              </button>
-            );
-          })}
-        </div>
 
         {/* Mensaje guía */}
-        <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs text-gray-500 shadow-sm border border-gray-100">
-          <span className="text-orange-500">🛈</span>
-          <span>
-            Elige una categoría y luego un curso para ver el detalle en la
-            sección inferior.
+        <div className="mt-4 w-fit flex items-center gap-2 rounded-full bg-white/90 px-4 py-1.5 text-[13px] text-gray-600 shadow-md border border-gray-200 backdrop-blur-sm">
+          <span className="text-orange-500 text-sm">🛈</span>
+          <span className="whitespace-nowrap">
+            Elige una categoría y luego un curso para ver el detalle en la sección inferior.
           </span>
         </div>
       </div>

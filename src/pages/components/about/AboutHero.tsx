@@ -39,7 +39,7 @@ const AboutHero: React.FC<Props> = ({ title, highlighted, subtitle }) => {
                             Inicio
                         </Link>
                         <span className="mx-1 text-slate-400">/</span>
-                        <span className="text-orange-300 font-semibold">Nosotros</span>
+                        <span className="text-orange-400 font-semibold">Nosotros</span>
                     </motion.p>
 
                     {/* título */}
@@ -49,10 +49,10 @@ const AboutHero: React.FC<Props> = ({ title, highlighted, subtitle }) => {
                         transition={{ duration: 0.6, delay: 0.05 }}
                         className="flex items-center gap-3 mb-2"
                     >
-                        <ShieldCheck className="hidden sm:block size-8 md:size-9 text-orange-300" />
+                        <ShieldCheck className="hidden sm:block size-8 md:size-9 text-orange-400" />
                         <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
                             {title}{" "}
-                            <span className="block text-orange-300">
+                            <span className="block text-orange-400">
                                 {highlighted}
                             </span>
                         </h1>

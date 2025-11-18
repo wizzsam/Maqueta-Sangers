@@ -36,14 +36,14 @@ const ProductsHero: React.FC<Props> = ({ waPhone }) => {
             </Link>
 
             <span className="mx-1 text-slate-400">/</span>
-            <span className="text-orange-300 font-semibold">Productos</span>
+            <span className="text-orange-400 font-semibold">Productos</span>
           </p>
           {/* título principal */}
           <div className="flex items-center gap-3 mb-2">
-            <ShoppingBag className="hidden sm:block size-8 md:size-9 text-orange-300" />
+            <ShoppingBag className="hidden sm:block size-8 md:size-9 text-orange-400" />
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
               Conoce los productos
-              <span className="block text-orange-300">
+              <span className="block text-orange-400">
                 que Sangers tiene para ti
               </span>
             </h1>

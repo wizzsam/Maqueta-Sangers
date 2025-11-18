@@ -32,7 +32,7 @@ const ServicesHero: React.FC<Props> = () => {
                             Inicio
                         </Link>
                         <span className="mx-1 text-slate-400">/</span>
-                        <span className="text-orange-300 font-semibold">Servicios</span>
+                        <span className="text-orange-400 font-semibold">Servicios</span>
                     </motion.p>
 
                     {/* título + descripción */}
@@ -43,7 +43,7 @@ const ServicesHero: React.FC<Props> = () => {
                     >
                         <h1 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">
                             Nuestros{" "}
-                            <span className="text-orange-300">Servicios especializados</span>
+                            <span className="text-orange-400">Servicios especializados</span>
                         </h1>
                         <p className="mt-2 max-w-2xl text-sm md:text-base text-slate-100/90">
                             Soluciones profesionales de saneamiento ambiental para hogares,
